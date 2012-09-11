@@ -5,11 +5,23 @@ from fabric.decorators import task
 from fabric.operations import run
 from fabric.operations import sudo
 
+PACKAGES = [
+    'binutils',
+    'build-essential',
+    'lynx-cur',
+    'python-dev',
+    'python-virtualenv',
+    'subversion',
+    'unzip',
+    'git',
+    # TODO pil, mapnik etc
+    ]
+
 
 @task
 @hosts('vagrant@33.33.33.20')
 def initial_setup():
-    sudo("apt-get install git python-dev python-virtualenv")
+    sudo("apt-get install " + ' '.join(PACKAGES))
     if not exists("tools"):
         run("git clone git@github.com:reinout/tools.git")
     if not exists("/Users"):
