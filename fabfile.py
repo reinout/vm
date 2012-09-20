@@ -12,6 +12,7 @@ PACKAGES = [
     'bzr',
     'emacs23-nox',
     'git',
+    'lessc',
     'libjpeg-dev',
     'lynx-cur',
     'memcached',
