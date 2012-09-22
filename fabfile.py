@@ -10,6 +10,8 @@ PACKAGES = [
     'binutils',
     'build-essential',
     'bzr',
+    'coffeescript',
+    'curl',
     'emacs23-nox',
     'git',
     'lessc',
