@@ -2,3 +2,4 @@ django
 wordpress
 
 *.pyc
+.DS_Store
