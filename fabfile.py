@@ -13,6 +13,7 @@ PACKAGES = [
     'coffeescript',
     'curl',
     'emacs23-nox',
+    'gettext',
     'git',
     'lessc',
     'libjpeg-dev',
