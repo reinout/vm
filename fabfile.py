@@ -20,6 +20,7 @@ PACKAGES = [
     'lynx-cur',
     'memcached',
     'mercurial',
+    'ncurses-dev',
     'nginx',
     'postgresql-9.1-postgis',
     'python-dev',
