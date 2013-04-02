@@ -100,9 +100,8 @@ def initial_setup():
         with cd('/Users'):
             sudo("ln -s /home/vagrant reinout")
     with cd('tools'):
-        run("virtualenv --system-site-packages .")
-        run("bin/pip install . -r requirements.txt")
-        run("./install_shell_scripts.sh")
+        run("python bootstrap.py")
+        run("bin/buildout")
 
     if not exists("Dotfiles"):
         run("git clone ssh://reinout@vanrees.org/~/git/Dotfiles")
