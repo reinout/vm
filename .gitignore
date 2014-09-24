@@ -1,6 +1,7 @@
 django
 barebones
-wordpress
+14
+14server
 
 *.pyc
 .DS_Store
