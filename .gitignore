@@ -1,8 +1,7 @@
 django
-barebones
-14
-14server
+
 twaalf
+veertien
 
 *.pyc
 .DS_Store
