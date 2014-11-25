@@ -126,4 +126,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+
+  # Local provisioning with ansible
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "provision.yml"
+    ansible.groups = {
+      "development" => ["default"],
+    }
+    # In case of problems with provisioning, uncomment the following line.
+    # ansible.verbose = 'vv'
+  end
 end
