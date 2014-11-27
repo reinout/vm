@@ -34,10 +34,11 @@ def main():
                 os.symlink(src, ANSIBLE_CFG_FILENAME)
                 print("Linked %s to %s" % (src, ANSIBLE_CFG_FILENAME))
 
-            if not os.path.exists('utils'):
-                src = '/Users/reinout/utils'
-                os.symlink(src, 'utils')
-                print("Linked %s to %s" % (src, 'utils'))
+            for to_symlink in ['utils', 'Dotfiles', 'tools']:
+                if not os.path.exists(to_symlink):
+                    src = '/Users/reinout/%s' % to_symlink
+                    os.symlink(src, to_symlink)
+                    print("Linked %s to %s" % (src, to_symlink))
 
         #   config.vm.network "private_network", ip: "10.0.0.12"
         if vm_name not in ignore_contents:
