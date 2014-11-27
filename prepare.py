@@ -34,7 +34,7 @@ def main():
                 os.symlink(src, ANSIBLE_CFG_FILENAME)
                 print("Linked %s to %s" % (src, ANSIBLE_CFG_FILENAME))
 
-            for to_symlink in ['utils', 'Dotfiles', 'tools']:
+            for to_symlink in ['utils', 'Dotfiles']:
                 if not os.path.exists(to_symlink):
                     src = '/Users/reinout/%s' % to_symlink
                     os.symlink(src, to_symlink)
