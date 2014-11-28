@@ -34,12 +34,6 @@ def main():
                 os.symlink(src, ANSIBLE_CFG_FILENAME)
                 print("Linked %s to %s" % (src, ANSIBLE_CFG_FILENAME))
 
-            for to_symlink in ['utils', 'Dotfiles']:
-                if not os.path.exists(to_symlink):
-                    src = '/Users/reinout/%s' % to_symlink
-                    os.symlink(src, to_symlink)
-                    print("Linked %s to %s" % (src, to_symlink))
-
         #   config.vm.network "private_network", ip: "10.0.0.12"
         if vm_name not in ignore_contents:
             print("%s should be added to .gitignore" % vm_name)
