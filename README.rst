@@ -42,3 +42,7 @@ Provisioning
 
 Every VM should have a provision script. ``provision_VMNAME.yml``. No manual
 steps, please.
+
+I use some roles I made for my work (in an effort to make them a bit generic).
+And I use https://github.com/reinout/reinoutible-vmsetup for my specific
+custom VM setup.
