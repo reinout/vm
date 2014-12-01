@@ -1,5 +1,5 @@
 - hosts: development
   sudo: yes
   roles:
-    - reinoutible-vmsetup
     - nensible-lts12lizardbox
+    - reinoutible-vmsetup
